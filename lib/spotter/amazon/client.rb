@@ -1,13 +1,11 @@
-require 'aws-sdk'
-
 module Spotter
   module Amazon
-    class Ec2Client
+    class Client
 
       #@return [Aws::EC2::Client]
-      def self.get
+      def self.ec2
         Aws::EC2::Client.new
-      end # get
+      end
 
     end
   end

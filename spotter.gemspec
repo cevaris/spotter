@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
 
   spec.add_development_dependency 'dotenv-rails'
-  spec.add_development_dependency 'amazon-sdk', '~> 2'
+  spec.add_development_dependency 'aws-sdk', '~> 2'
 end
