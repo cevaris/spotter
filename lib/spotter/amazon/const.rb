@@ -1,6 +1,14 @@
 module Spotter
   module Amazon
 
+    SPOT_TYPES = %w(
+      one-time
+      persistent
+    ).each_with_object({}) do |t, h|
+      key = t.gsub(/[\-]/, '_').downcase.to_sym
+      h[key] = t
+    end
+
     DESCRIPTIONS = [
       'Linux/UNIX',
       'SUSE Linux',
@@ -13,8 +21,9 @@ module Spotter
       h[key] = t
     end
 
-    TYPES = %w(
+    INSTANCE_TYPES = %w(
       t1.micro
+      t2.micro
       m1.small
       m1.medium
       m1.large

@@ -20,6 +20,10 @@ module Spotter
 
     Aws.config.update({region: AWS_REGION, credentials: AWS_CREDS})
 
+    DEFAULT_INSTANCE_TYPE=INSTANCE_TYPES[:t1_micro]
+    DEFAULT_SPOT_PRICE = 1.00
+    DEFAULT_SPOT_PRICE_MULTIPLIER = 1.25
+
     require 'spotter/amazon/client'
     require 'spotter/amazon/request'
 
